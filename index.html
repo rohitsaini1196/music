@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>My Music Player</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+    
+    <script>
+        var folder = "audioFiles/";
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("src", function (i, val) {
+            if( val.match("mp3") ) { 
+               console.log("I got all file names!");
+               
+            } 
+        });
+    }
+});
+    </script>
+</head>
+<body>
+    <h1>My Music Player!!!</h1>
+    <div class="audioFile">
+        <audio id="audio1" src="audioFiles/1.mp3"> </audio>
+        <audio id="audio2" src="audioFiles/2.mp3"> </audio>
+        <audio id="audio3" src="audioFiles/3.mp3"> </audio>
+        <audio id="audio4" src="audioFiles/4.mp3"> </audio>
+        <audio id="audio5" src="audioFiles/5.mp3"> </audio>
+    </div>
+
+    <div id="fileNames"></div>
+    <div class="directorySlider"></div>
+
+
+</body>
+</html>

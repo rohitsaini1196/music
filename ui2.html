@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+            html {
+	width: 100%;
+	height: 100%;
+	background: #dacebb;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Arial",sans-serif;
+}
+
+.player {
+	width: 600px;
+	height: 175px;
+	background: #b7ece4;
+
+	background: -webkit-linear-gradient(#b7ece4, #9cd5cc);
+	background: -moz-linear-gradient(#b7ece4, #9cd5cc);
+	background: -o-linear-gradient(#b7ece4, #9cd5cc);
+	background: -ms-linear-gradient(#b7ece4, #9cd5cc);
+	background: linear-gradient(#b7ece4, #9cd5cc);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -87px 0 0 -300px;
+	border-radius: 87px 5px 5px 87px;
+
+	-webkit-box-shadow: inset 5px 10px 5px -5px #d4f2ed, inset 0 -10px 5px -5px #91c3b8, 3px 5px 10px rgba(0,0,0,.2), 15px 20px 100px -25px rgba(0,0,0,.5);
+	box-shadow: inset 5px 10px 5px -5px #d4f2ed, inset 0 -10px 5px -5px #91c3b8, 3px 5px 10px rgba(0,0,0,.2), 15px 20px 100px -25px rgba(0,0,0,.5);
+}
+
+/* Left Icon */
+.left_icon {
+	height: 175px;
+	width: 175px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 87px 0 0 87px;
+}
+
+.left_icon .shadow {
+	height: 175px;
+	width: 50px;
+	position: absolute;
+	left: 80px;
+	top: 0;
+	border-radius: 10px 00px 0px 10px;
+
+	-webkit-box-shadow: inset 50px 0 50px -50px rgba(0,0,0,.5), -5px 0 0 #95c5bb, -10px 0 5px -5px rgba(255,255,255,.2);
+	box-shadow: inset 50px 0 50px -50px rgba(0,0,0,.5), -5px 0 0 #95c5bb, -10px 0 5px -5px rgba(255,255,255,.2);
+}
+
+.left_icon .btn {
+	width: 30px;
+	height: 30px;
+	background: #b7ece4;
+
+	background: -webkit-linear-gradient(#b6ebe3, #cef3ee);
+	background: -moz-linear-gradient(#b6ebe3, #cef3ee);
+	background: -o-linear-gradient(#b6ebe3, #cef3ee);
+	background: -ms-linear-gradient(#b6ebe3, #cef3ee);
+	background: linear-gradient(#b6ebe3, #cef3ee);
+	position: absolute;
+	left: 35px;
+	top: 110px;
+	border-radius: 50%;
+
+	-webkit-box-shadow: 0 -2px 0px 1px #cef3ee, 0 0 0px 2px #aacccc;
+	box-shadow: 0 -2px 0px 1px #cef3ee, 0 0 0px 2px #aacccc;
+}
+
+.left_icon .light {
+	width: 5px;
+	height: 5px;
+	background: #fff;
+	position: absolute;
+	left: 18px;
+	top: 8px;
+	border-radius: 50%;
+
+	-webkit-box-shadow: inset -1px -1px 3px 1px red, 0 0 5px red;
+	box-shadow: inset -1px -1px 3px 1px red, 0 0 5px red;
+}
+
+.left_icon .cord_container {
+	width: 75px;
+	height: 25px;
+	position: absolute;
+	top: 120px;
+	left: 65px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.left_icon .cord {
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	left: -35px;
+	top: -105px;
+	border: 2px solid #cef3ee;
+
+	-webkit-box-shadow: 0 0 0 2px #aacccc;
+	box-shadow: 0 0 0 2px #aacccc;
+	border-radius: 50%;
+}
+
+.left_icon .reader {
+	width: 20px;
+	height: 10px;
+
+	background: -webkit-linear-gradient(#cef3ee, #7c9d91);
+	background: -moz-linear-gradient(#cef3ee, #7c9d91);
+	background: -o-linear-gradient(#cef3ee, #7c9d91);
+	background: -ms-linear-gradient(#cef3ee, #7c9d91);
+	background: linear-gradient(#cef3ee, #7c9d91);
+	position: absolute;
+	top: 110px;
+	left: 130px;
+	border-radius: 2px;
+
+	-webkit-box-shadow: 6px 0 0 -4px #cef3ee;
+	box-shadow: 6px 0 0 -4px #cef3ee;
+	z-index: 1;
+
+	-webkit-transform: rotate(-55deg);
+	-moz-transform: rotate(-55deg);
+	-o-transform: rotate(-55deg);
+	-ms-transform: rotate(-55deg);
+	transform: rotate(-55deg);
+}
+
+.left_icon .lp_cont {
+	width: 95px;
+	height: 170px;
+	position: absolute;
+	top: 50%;
+	left: 80px;
+	margin: -85px 0;
+	overflow: hidden;
+}
+
+.left_icon .lp {
+	width: 160px;
+	height: 160px;
+	background: #514442;
+	position: absolute;
+	top: 50%;
+	margin: -80px -70px;
+	border-radius: 50%;
+
+	-webkit-box-shadow: inset 0 0 0 2px #473939, inset 0 0 0 4px #514442, inset 0 0 0 6px #473939, inset 0 0 0 8px #514442, inset 0 0 0 9px #5c4d4a, inset 0 0 0 10px #514442, inset 0 0 0 11px #5c4d4a, inset 0 0 0 12px #514442, inset 0 0 0 13px #5c4d4a, inset 0 0 0 14px #514442, inset 0 0 0 15px #5c4d4a, inset 0 0 0 16px #514442, inset 0 0 0 17px #5c4d4a, inset 0 0 0 18px #514442, inset 0 0 0 19px #5c4d4a, inset 0 0 0 20px #514442, inset 0 0 0 21px #5c4d4a, inset 0 0 0 22px #514442, inset 0 0 0 23px #5c4d4a, inset 0 0 0 24px #514442, inset 0 0 0 25px #5c4d4a, inset 0 0 0 26px #514442, inset 0 0 0 27px #5c4d4a, inset 0 0 0 28px #514442, inset 0 0 0 29px #5c4d4a, inset 0 0 0 30px #514442, inset 0 0 0 31px #5c4d4a, inset 0 0 0 32px #514442, inset 0 0 0 33px #5c4d4a, inset 0 0 0 34px #514442, inset 0 0 0 35px #5c4d4a, inset 0 0 0 37px #473939, inset 0 0 0 39px #514442, inset 0 0 0 59px #473939, inset 0 0 0 67px #e3e3e3, inset 0 0 4px 67px #888, inset 0 0 0 100px #fff, 2px 3px 5px rgba(0,0,0,.4);
+	box-shadow: inset 0 0 0 2px #473939, inset 0 0 0 4px #514442, inset 0 0 0 6px #473939, inset 0 0 0 8px #514442, inset 0 0 0 9px #5c4d4a, inset 0 0 0 10px #514442, inset 0 0 0 11px #5c4d4a, inset 0 0 0 12px #514442, inset 0 0 0 13px #5c4d4a, inset 0 0 0 14px #514442, inset 0 0 0 15px #5c4d4a, inset 0 0 0 16px #514442, inset 0 0 0 17px #5c4d4a, inset 0 0 0 18px #514442, inset 0 0 0 19px #5c4d4a, inset 0 0 0 20px #514442, inset 0 0 0 21px #5c4d4a, inset 0 0 0 22px #514442, inset 0 0 0 23px #5c4d4a, inset 0 0 0 24px #514442, inset 0 0 0 25px #5c4d4a, inset 0 0 0 26px #514442, inset 0 0 0 27px #5c4d4a, inset 0 0 0 28px #514442, inset 0 0 0 29px #5c4d4a, inset 0 0 0 30px #514442, inset 0 0 0 31px #5c4d4a, inset 0 0 0 32px #514442, inset 0 0 0 33px #5c4d4a, inset 0 0 0 34px #514442, inset 0 0 0 35px #5c4d4a, inset 0 0 0 37px #473939, inset 0 0 0 39px #514442, inset 0 0 0 59px #473939, inset 0 0 0 67px #e3e3e3, inset 0 0 4px 67px #888, inset 0 0 0 100px #fff, 2px 3px 5px rgba(0,0,0,.4);
+}
+
+/* Content */
+.content {
+	width: 400px;
+	height: 175px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.content h1 {
+	width: 350px;
+	color: #77aea5;
+	font-size: 24px;
+	text-shadow: 0 1px #cef3ee;
+	font-weight: 200;
+	white-space: nowrap;
+	overflow: hidden;
+
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	margin-top: 24px;
+}
+
+.author {
+	font-size: 20px;
+}
+
+.slider,.progress {
+	width: 350px;
+	height: 10px;
+	background: #7d6e67;
+	margin-top: 10px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: inset 0 5px 10px -5px rgba(0,0,0,.3), 0 1px #cef3ee;
+	box-shadow: inset 0 5px 10px -5px rgba(0,0,0,.3), 0 1px #cef3ee;
+}
+
+.progress {
+	background: #e08a5f;
+	width: 200px;
+	position: relative;
+
+	-webkit-box-shadow: inset 0 5px 10px -5px rgba(0,0,0,.3);
+	box-shadow: inset 0 5px 10px -5px rgba(0,0,0,.3);
+}
+
+.progress::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: #d9dbd4;
+	position: absolute;
+	right: -10px;
+	top: -5px;
+	border-radius: 50%;
+
+	-webkit-box-shadow: inset 2px 2px 2px -1px #fff, inset -2px -2px 2px rgba(0,0,0,.3), 3px 3px 3px rgba(0,0,0,.2);
+	box-shadow: inset 2px 2px 2px -1px #fff, inset -2px -2px 2px rgba(0,0,0,.3), 3px 3px 3px rgba(0,0,0,.2);
+}
+
+.btns {
+	width: 350px;
+	text-align: center;
+	margin-top: 23px;
+}
+
+.btns a {
+	width: 40px;
+	height: 40px;
+	background: #b7ece4;
+  
+  position:relative;
+  top:-5px;
+
+	background: -webkit-linear-gradient(#b7ece4, #9cd5cc);
+	background: -moz-linear-gradient(#b7ece4, #9cd5cc);
+	background: -o-linear-gradient(#b7ece4, #9cd5cc);
+	background: -ms-linear-gradient(#b7ece4, #9cd5cc);
+	background: linear-gradient(#b7ece4, #9cd5cc);
+	display: inline-block;
+	margin:0 10px 0;
+	color: #fff;
+	text-shadow: -1px -2px rgba(0,0,0,.3);
+	text-decoration: none;
+	border-radius: 50%;
+
+	-webkit-box-shadow: inset 2px 4px 5px -3px #fff, inset -2px -4px 5px rgba(0,0,0,.2), 0 0 0 2px #6cad9b, -2px -2px 0 2px #80bdaf, 2px 2px 0 2px rgba(255,255,255,.3), 0 0 0 4px rgba(255,255,255,.1), 0 0 0 5px #8ac5b9;
+	box-shadow: inset 2px 4px 5px -3px #fff, inset -2px -4px 5px rgba(0,0,0,.2), 0 0 0 2px #6cad9b, -2px -2px 0 2px #80bdaf, 2px 2px 0 2px rgba(255,255,255,.3), 0 0 0 4px rgba(255,255,255,.1), 0 0 0 5px #8ac5b9;
+}
+.btns a:before {
+  font-size: 24px;
+  
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin:-12px 0 0 -12px;
+}
+
+.btns .play {
+	width: 50px;
+	height: 50px;
+  top:0;
+}
+.btns .play:before {
+  font-size:32px;
+
+  margin:-16px 0 0 -8px;
+}
+.btns .forward:before {
+  margin-left:-8px;
+}
+
+.btns a:active {
+  -webkit-box-shadow: inset -2px -4px 5px -3px #fff, inset 2px 4px 5px rgba(0,0,0,.2), 0 0 0 2px #6cad9b, -2px -2px 0 2px #80bdaf, 2px 2px 0 2px rgba(255,255,255,.3), 0 0 0 4px rgba(255,255,255,.1), 0 0 0 5px #8ac5b9;
+	box-shadow: inset -2px -4px 5px -3px #fff, inset 2px 4px 5px rgba(0,0,0,.2), 0 0 0 2px #6cad9b, -2px -2px 0 2px #80bdaf, 2px 2px 0 2px rgba(255,255,255,.3), 0 0 0 4px rgba(255,255,255,.1), 0 0 0 5px #8ac5b9;
+}
+
+/* Fonts */
+@font-face {
+	font-family: 'player';
+	src: url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAARkAA0AAAAABigAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABMAAAABoAAAAcZi6ZzEdERUYAAAFMAAAAHwAAACAANAAGT1MvMgAAAWwAAABHAAAAVk8P2tRjbWFwAAABtAAAAE4AAAFYCFv1CWdhc3AAAAIEAAAACAAAAAj//wADZ2x5ZgAAAgwAAAC9AAABAD1aCXhoZWFkAAACzAAAADAAAAA2/YRql2hoZWEAAAL8AAAAHgAAACQDav/IaG10eAAAAxwAAAAYAAAAHAb1AB5sb2NhAAADNAAAABAAAAAQAHQAum1heHAAAANEAAAAHQAAACAASgAdbmFtZQAAA2QAAADcAAABd2HwJpJwb3N0AAAEQAAAACIAAAA4TsCevHicY2BgYGQAgpOd+YYg+lzQVF8YDQBAfQX4AAB4nGNgZGBg4ANiCQYQYGJgZGBmYAOSLGAeAwAEpgA7AHicY2Bk7GKcwMDKwMGozGjJwMBgB6WvM4gxFDMwMDGwMjPAAKMAAwIEpLmmMDgw6HxgYGz4f4BBg7GBwaEBqAYkBwBsMAoFAHicY2BgYGaAYBkGRgYQCALyGMF8FgYzIM0BhExgGb0PDP//g1k6MJYARC0bWJQVSLMwMDACeRCjgDRIJxMDKmBE5bKysTAMNwAAdAUHXgAAAAAAAf//AAJ4nHWOPQrCQBCF5212x0AECeQHiygWxtImiZWYA3gCQYg38AjBE9gIlp4hWKTMTfQkq7tJKQ4z78Eb+HgEok+HDjUJIh8LdLpErUsyY39vXFDRlCjmNPezYo4oznsLJuB0Cx55ilk1AkaUWYZIlGScWZrUaaypsTnJjSMG7sxwHwMXRRT6Aa+RrsLesp2JEhQb3H7AOBqKvv4h274vVDiRR7RUQ+FYRQEO+smuy9jzvZVsu7FspUv0BfMMKvsAAAB4nGNgZGBgAGL3LZqc8fw2Xxm4GQ8ARRjOBU31RdD/DzAeYGwAcjkYmECiACC5Cqp4nGNgZGBgbPh/gEGD8QADwz8HIAkUQQHsAIQbBTIAAHicYzzAAAFTIRTjAjCWY0xgYAAALJUDGAAAAAAAAAAAAA4AOgBmAIB4nGNgZGBgYGeQYgDRDAxMQMwIZjuA+QwABZcAaAAAAHicbY4xbsJAEEWfwTiKguhCvRQpbdlOA5QpOAAFvYuVhWTZxEDBOSKlT5dj5AA5AafJ9zJFCna1mjezf/4MMOWTiOFEJMyMRzzwYjxmwbtxLM2X8YQnfowT3auUUfyoyjR0DTyS47PxmDdS41iaD+MJc76NE9V/OdBQccHTw6GpLl5xq7TmHL6G1NfnphJs6Gg5hdhL4XGUZOSKa73/ZrfKUmus9EppCl5l0bWnTdfX3pVZ7tbuNlKwTFdpmReS3F1pF9Ij+7CCk9kwlp3vj/uudUWW32/8AzaYNeR4nGNgYsAP2IGYkYGJkYlBkIGfQYC9NC/TzcDAAAAOAAJpAAA=) format('woff'),
+		 url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.icon-forward, .icon-backward, .icon-play {
+	font-family: 'player';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-forward:before {
+	content: "\2e";
+}
+.icon-backward:before {
+	content: "\2c";
+}
+.icon-play:before {
+	content: "\2d";
+}
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+        <section class="player">
+                <figure class="left_icon">    
+                  <div class="overlay">
+                    <div class="shadow"></div>
+                    
+                    <div class="btn">
+                      <div class="light"></div>
+                    </div>
+                    <div class="cord_container">
+                      <div class="cord"></div>
+                    </div>
+                    <div class="reader"></div>
+                  </div>
+                  
+                  <div class="lp_cont">
+                    <div class="lp"></div>
+                  </div>
+                </figure>
+
+                <div class="audioFile">
+                        <audio id="audio1" src="audioFiles/1.mp3" ontimeupdate="udpateProgress()" > </audio>
+                        <audio id="audio2" src="audioFiles/2.mp3"> </audio>
+                        <audio id="audio3" src="audioFiles/3.mp3"> </audio>
+                        <audio id="audio4" src="audioFiles/4.mp3"> </audio>
+                        <audio id="audio5" src="audioFiles/5.mp3"> </audio>
+                    </div>
+                
+                <section class="content">
+                  <h1>Namo Namo <span class="author">Kedarnath</span> :<span id="ttime">00:00</span></h1>
+                  
+                  <!-- <div class="slider">
+                    <div class="progress">
+                    </div>
+                  </div> -->
+                  <progress id="seekbar" value="0" max="1" style="width:380px;"></progress>
+                  
+                  <div class="btns">
+                    <a class="back icon-backward" href="#"></a>
+                    <a class="play icon-play" href="#" onclick="ggwp()"></a>
+                    <a class="forward icon-forward" href="#"></a>      
+                  </div>
+                </section>
+              </section>
+
+<script>
+var myAudio = document.getElementById("audio1");
+
+
+
+var isPlaying = false;
+
+function ggwp() {
+    var duration = myAudio.duration / 60;
+    var durationInMinutes = duration.toFixed(2)
+    console.log(durationInMinutes);
+    
+
+    document.getElementById('ttime').innerHTML  =durationInMinutes;
+  if (isPlaying) {
+    myAudio.pause()
+  } else {
+    myAudio.play();
+  }
+};
+
+function udpateProgress() {
+    var player = document.getElementById('audio1');
+    var progressbar = document.getElementById('seekbar');
+    progressbar.value = (player .currentTime / player .duration);
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+</script>
+</body>
+</html>

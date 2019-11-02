@@ -1,0 +1,17 @@
+{
+  "name": "musicplayer",
+  "version": "1.0.0",
+  "description": "a music player for desktop",
+  "main": "mainmain.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Rohit Saini",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^5.0.6",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "web-audio-player": "^1.3.3"
+  }
+}

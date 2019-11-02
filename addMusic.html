@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Music</title>
+    <script>
+      let photo = document.getElementById("image-file").files[0];
+      let formData = new FormData();
+
+      formData.append("photo", photo);
+      fetch("/upload/image", { method: "POST", body: formData });
+    </script>
+  </head>
+  <body>
+    <h3>Add Music</h3>
+    <form action="addMusic" method="POST">
+      <input
+        id="ezlife"
+        type="file"
+        name="addMusic"
+        placeholder="add music file"
+        required
+      />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>

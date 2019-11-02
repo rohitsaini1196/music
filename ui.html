@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <audio ontimeupdate="udpateProgress()" src="audioFiles/3.mp3" id="player"></audio>  
+        <button onClick="play()">Play</button>
+        <button onClick="pause()">Pause</button>
+        <progress id="seekbar" value="0" max="1" style="width:400px;"></progress>
+        
+        
+</body>
+<script> 
+    function play() {
+    document.getElementById('player').play();
+}
+
+function pause() {
+    document.getElementById('player').pause();
+}
+function udpateProgress() {
+    var player = document.getElementById('player');
+    var progressbar = document.getElementById('seekbar');
+    progressbar.value = (player .currentTime / player .duration);
+};
+
+</script>
+</html>
